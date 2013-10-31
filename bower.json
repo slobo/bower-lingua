@@ -1,7 +1,7 @@
 {
   "name": "lingua",
   "main": "lingua.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/ErikAndreas/lingua",
   "description": "Angular i18n library wrapping Jed which allows for gettext-style support in html and javascript.",
   "keywords": [
@@ -9,8 +9,8 @@
     "i18n",
     "gettext"
   ],
-  dependencies: [
+  "dependencies": { 
     "jed": "~0.5.4",
     "microajax": "~0.3.0"
-  ]
+  }
 }
