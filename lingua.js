@@ -17,8 +17,8 @@ using poedit the tabs for plural translations does not always appear, see https:
  >po2json translations/sv-se.po l_sv-se.json
  */
 
- var Lingua = {
-    init:function(doc,cb) {
+var Lingua = {
+    init:function(doc,cb,translationsPathPrefix) {
         "use strict";
         var locale = localStorage.getItem('locale');
         console.log(locale);
@@ -29,7 +29,7 @@ using poedit the tabs for plural translations does not always appear, see https:
         } else {
           locale = "en-us";
         }
-        microAjax('l_'+locale+'.json',function(data) {
+        microAjax(translationsPathPrefix+'l_'+locale+'.json',function(data) {
           data = JSON.parse(data);
           var i18n = new Jed({
             "domain" : locale,
@@ -73,3 +73,4 @@ angular.module('lingua').controller('linguaController',['$scope', '$window',func
         $window.location.reload();
     };
 }]);
+
